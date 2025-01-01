@@ -52,5 +52,33 @@ class Triangle {
         return Math.sqrt(this.a ** 2 + this.b ** 2);
 
     }
+    describe(){
+        return "I am triangle"
+    }
 }
-    
+
+//Create new class from basic Triangle one
+//avoid duplicate all functionaliy
+
+class ShyTriangle extends Triangle {
+    //don't repeat if not different
+    //will "inherit" from "parent"
+
+    describe(){
+        return "(runs and hides)"
+    }
+}
+class colorTriangle extends Triangle {
+    //call parent constructor if you need some changes in constructor
+    constructor(a,b,color){
+        super(a,b);
+        this.color = color;
+    }
+
+}
+class ColorMoodTriangle extends colorTriangle{
+    constructor(a,b,color,mood){
+        super(a,b,color);
+        this.mood = mood;
+    }
+}

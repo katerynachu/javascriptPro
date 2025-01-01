@@ -11,7 +11,7 @@ function getTriangleHypotenuse(a,b){
 
 let myTri ={
     a:3,
-    b:4,
+    b:4, 
     getArea:function(){
         return (this.a * this.b) / 2; //this = "this object"
     },
